@@ -1,0 +1,24 @@
+## Messaging Space/Slack channel with multiple users(Web server)
+- Idea: Build a basic discord/slack channel space where multiple users can message and talk
+- Core Requirements
+    - User should enter a name before joining the chat
+    - When a user sends a message, all users that are connected must be able to see the message the other person wrote
+        - A message should also display the time, and date the message was posted.
+    - When a user joins the chat, the other people connected to the chat are notified that a new user joined the chat through a chat notification
+        - New users who join cannot see previous chat history
+    - When a user leaves the chat, other people are notified in the chat that they left
+- Exception requirements
+    - No empty message should be able to be sent
+    - A max character limit should be in place to prevent resource exhaustion 
+    - Server should not crash
+- Technical requirements
+    - Start off terminal based → focus on the actual web server development
+        - Server side
+            - Using Python3 with socket library
+            - Concurrency: threading
+        - Client
+            - Simple python script using socket library
+            - Using telnet for testing(telnet localhost 8888)
+    - Migrate to Simple UI using some front end code(After getting terminal version working)
+        - HTML, CSS JavaScript, maybe some framework for frontend
+        - Flask-IO backend
